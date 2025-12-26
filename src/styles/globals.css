@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #25aff4;
+    --color-secondary: #a855f7;
+    --color-background-dark: #0B0E14;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Noto Sans', sans-serif;
+    --font-signature: 'Dancing Script', cursive;
+    --font-playfair: 'Playfair Display', serif;
+
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-pulse-slow: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+}
+
+:root {
+    font-family: 'Noto Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B0E14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #223c49;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #25aff4;
+}
+
+/* Nebula Background Utilities */
+.nebula-glow {
+    background: radial-gradient(circle, rgba(37, 175, 244, 0.15) 0%, rgba(11, 14, 20, 0) 70%);
+}
+
+.nebula-glow-purple {
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(11, 14, 20, 0) 70%);
+}
+
+.glass-panel {
+    background: rgba(16, 28, 34, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Background Patterns */
+.bg-grid-white {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.bg-dot-white {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}
+
+.animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+}
