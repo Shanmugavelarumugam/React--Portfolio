@@ -182,7 +182,7 @@ const Hero = () => {
                 </div>
             </div>
             {/* Scroll Indicator */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 animate-bounce opacity-50">
                 <span className="text-xs uppercase tracking-widest text-gray-500">Scroll</span>
                 <IoIosArrowDown className="text-gray-500 text-xl" />
             </div>

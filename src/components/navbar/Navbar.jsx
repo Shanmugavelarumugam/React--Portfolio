@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { RiMenu3Fill } from "react-icons/ri";
+import { MdOutlineClose } from "react-icons/md";
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -94,12 +96,16 @@ const Navbar = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="md:hidden size-10 rounded-lg bg-gray-800/50 border border-gray-700 flex items-center justify-center hover:bg-gray-800 transition-colors duration-300"
+                        className="md:hidden size-10 rounded-lg bg-gray-800/50 border border-gray-700 flex items-center justify-center hover:bg-gray-800 transition-colors duration-300 group"
                     >
-                        <span className={`material-symbols-outlined text-white transition-transform duration-300 ${mobileMenuOpen ? 'rotate-90' : ''
-                            }`}>
-                            {mobileMenuOpen ? 'close' : 'menu'}
-                        </span>
+                        {/* Icon Switch with Rotation Animation */}
+                        <div className={`transition-transform duration-300 ${mobileMenuOpen ? 'rotate-90' : 'rotate-0'}`}>
+                            {mobileMenuOpen ? (
+                                <MdOutlineClose className="text-white text-2xl" />
+                            ) : (
+                                <RiMenu3Fill className="text-white text-2xl" />
+                            )}
+                        </div>
                     </button>
                 </header>
             </div>
